@@ -9,6 +9,7 @@ const double p = 1.6075;
 
 class VolumetricFigures
 {
+	
 protected:
 
 	double S, V;
@@ -30,6 +31,7 @@ public:
 
 class Cone : public VolumetricFigures
 {
+
 private:
 	
 	double r, h, l;
@@ -52,6 +54,7 @@ public:
 		S = pi * r * (r + l);
 		V = (1.0/3) * pi * r * r * h;
 	}
+	
 	void output ()
 	{
 		VolumetricFigures :: output ();
@@ -61,6 +64,7 @@ public:
 
 class Parallelepiped : public VolumetricFigures
 {
+
 private:
 	
 	double x, y, z, sin_x_y, sin_y_z, sin_z_x, sin_z_x_y;
@@ -122,6 +126,7 @@ public:
 
 class Cube : public VolumetricFigures
 {
+
 private:
 	
 	double x;
@@ -151,6 +156,7 @@ public:
 
 class Sphere : public VolumetricFigures
 {
+
 private:
 	
 	double r;
@@ -180,8 +186,8 @@ public:
 
 class Ellipsoid : public VolumetricFigures
 {
+
 private:
-	
 
 	double a, b, c;
 
@@ -266,6 +272,7 @@ int main()
 			s.output();
 			break;
 		}
+
 		default: 
 			cout << "Wrong enter" << endl;
 			goto enter_figure;
